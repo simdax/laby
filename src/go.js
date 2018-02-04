@@ -33,7 +33,7 @@ export default function (x, y) {
 		}
 	}
 	catch (e) {
-		console.log(e ? 'inconnu' : e)
+//		console.log(e ? 'inconnu' : e)
 		this.piano.triggerRelease()
 		this.cursor.x -= x
 		this.cursor.y -= y

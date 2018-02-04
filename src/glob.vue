@@ -10,12 +10,15 @@
 	@touchend="fin($event)"
 	/>
   <div>
-	<div id="map" v-for="line in mapPrint">
-	  {{line}}
-	</div>
+	<!-- <div id="map" v-for="line in mapPrint"> -->
+	<!--   {{line}} -->
+	<!-- </div> -->
+  </div>
+  <div id="points">
+	{{level}}
   </div>
   <div id='el'v-if="win">
-	WIN
+	great
   </div>
 </div>
 </template>
@@ -41,6 +44,7 @@ export default
 	components: {GlobalEvents},
 	data() {
 		return {
+			points: 0,
 			win: 0,
 			level: 0,
 			playable: true,
@@ -59,8 +63,6 @@ export default
 	created () {
 		this.create()
 		Tone.Buffer.on('load', function() {
-			// console.log("io")
-			// plouf.start()
 			this.play_start();
 		}.bind(this))
 	},
@@ -155,8 +157,13 @@ export default
 </script>
 
 <style>
+#points {
+	z-index: 200;
+	font-size: 20px;
+}
+
 #el{
-	font-size: 50px;
+	font-size: 10px;
 	color: red;
 }
 </style>

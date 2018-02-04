@@ -23,7 +23,8 @@ export default {
 	name: 'App',
 	data(){
 		return {
-			alpha: 0
+			alpha: 0,
+			points: 0
 		}
 	},
 	components: {Events}
@@ -42,7 +43,14 @@ export default {
     height: 100%;	
 }
 
+#points{
+	z-index: 99;
+	color: white;
+	font-size: 20px;	
+}
+
 #video{
+	z-index:-1;
 	position: fixed;
     right: 0;
     bottom: 0;
