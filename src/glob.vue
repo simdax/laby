@@ -17,8 +17,8 @@
   <div id="points">
 	{{level}}
   </div>
-  <div id='el'v-if="win">
-	great
+  <div id="el" v-if="win">
+	good
   </div>
 </div>
 </template>
@@ -105,6 +105,8 @@ export default
                         this.go(0, 1);
                 }
             }
+			else
+				this.create_zero()
         },
 		create(){
 			this.win = 0
@@ -158,12 +160,20 @@ export default
 
 <style>
 #points {
+	position:absolute;
+	top: 80%;
+	right: 50%;
 	z-index: 200;
 	font-size: 20px;
 }
 
 #el{
-	font-size: 10px;
-	color: red;
+	float: center;
+	position:absolute;
+	top: 50%;
+	left: 45%;
+	z-index: 200;
+	font-size: 20px;
+	color: rgb(0, 255, 0);
 }
 </style>

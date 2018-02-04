@@ -5,7 +5,8 @@
   <div id="mask"
 	   @click="alpha -= 0.1"
 	   :style="{background:'rgba(0, 0, 0, ' + alpha + ')'}">
-	Swipe to move. Space to restart.
+	<p>Swipe or arrows to move.</p>
+	<p>Space or double tap to restart.</p>
   </div>
   <video id="video" loop autoplay src="static/fog.mp4"></video>
 </div>
