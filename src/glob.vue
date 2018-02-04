@@ -105,6 +105,8 @@ export default
                         this.go(0, 1);
                 }
             }
+			else
+				this.create_zero()
         },
 		create(){
 			this.win = 0
